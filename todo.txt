@@ -1,0 +1,38 @@
+[] register a user
+[] login a user
+[] who i am 
+
+
+
+register a user 
+request =post 
+url =/api/register
+fields 
+name:'Coders Gyan',
+
+email:'codersgyan@gmail.com'
+password:'secert',
+repeat_password:''
+
+we grenated aceess_token for every register user user
+
+post -login
+url -/api/login
+
+we agrented aceess_token
+
+
+who i am user data
+
+get /api/me with auth middleware 
+
+
+refres_token
+
+url -post /api/refresh to get access_token
+{
+    refres_token:"dsss.jkkk.jkkk"
+}
+
+
+logout post /api/logout auth middleware

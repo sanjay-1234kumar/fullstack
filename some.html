@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ <h1>some page </h1>
+<button id="btn">
+  click
+</button>
+ <script>
+   console.log("script start");
+
+// how to declare array
+
+const l=["js","c++","html"];
+// propreties and methods
+
+// length of array
+console.log(l.length);
+
+// index of array start from 0 t0 l-1
+console.log(l[0]);
+
+// add item to array last start
+
+l.push("i am added last in array");
+
+// push method last add 
+console.log(l);
+
+// from uns
+
+l.unshift("i am strating");
+
+console.log(l);
+// remove last from array
+l.pop();
+
+// 
+console.log(l);
+// remove start from
+
+l.shift();
+console.log(l);
+
+// loop in array 
+
+let sum=0;
+for(let i=0;i<l.length;i++){
+
+sum=sum+l[i];
+}
+
+console.log(sum);
+
+const items=[{
+  id:"101",
+  price:300,
+  totalq:1,
+  totalp:300,
+  instock:30,
+  dlc:40,
+
+},
+{
+  id:"102",
+  price:200,
+  totalq:1,
+  totalp:200,
+  instock:10,
+  dlc:0,
+  
+},
+{
+  id:"103",
+  price:50,
+  totalq:1,
+  totalp:50,
+  instock:3,
+  dlc:80
+  
+}
+];
+
+let totalquantity=0;
+let totalprice=0;
+let devilcharge=0;
+
+for(i=0;i<items.length;i++){
+  totalquantity=totalquantity+items[i].totalq;
+  totalprice=totalprice+items[i].totalp;
+  devilcharge=devilcharge+items[i].dlc;
+
+
+
+
+}
+
+console.log(totalprice);
+
+console.log(totalquantity);
+
+console.log(devilcharge);
+
+// read operations for each 
+
+// upadate operations karna chat
+
+let c=0;
+
+
+items.forEach((i)=>{
+i.price=i.price-10;
+
+
+});
+
+console.log(items);
+// filter array return karata 
+
+let res=items.filter((i,y)=>{
+  // return ture or false
+
+  console.log("y ",y);
+
+  if(i.price>60){
+return true;
+  }else{
+    return false;
+  }
+
+});// by default empty array 
+
+console.log(res);
+
+// map function return modifed
+
+let users=[{f:"jhon",l:"doe"},{f:"sanjay",l:"cahndel"}]// [{full:"jhone doe"},{fi}]
+
+let mus=users.map((i)=>{
+
+  return{
+    fullname:i.f+" "+i.l
+  }
+});
+// map filter return 
+
+console.log(mus);// new array return karata hai
+
+// reduce ilteration ki eismalta hota 
+let movies=[{name:"iu",b:150},{name:"move2",b:600}];
+// caluated total bugget kitna sare movis
+
+let totalbuget=movies.reduce((acss,i)=>{
+  acss=acss+i.b;
+
+  return acss;
+
+},0);
+
+console.log(totalbuget);
+
+// indexof 
+
+const admins=[2,3,5];
+
+const us={
+  name:"xyz",
+  id:10,
+};
+  
+// ye check users admins users ki nahi 
+
+let rt=admins.indexOf(us.id);// value kaite index return karte hai
+
+console.log(rt);
+
+let students=[{id:"101",name:"sanjay",fee:400},{id:"102",name:"sumit",fee:500}];
+
+// id="102" newfee:1000, students
+
+// find methods return true or false
+
+let gt=students.find((i,y)=>{
+  if(i.id==="108"){    
+    return true;
+
+  }else{
+    return false;
+  }  
+
+});
+
+// return udefiend ya hot 
+console.log(gt);
+
+
+let ind=-1;
+
+function findandupadated(userid,data){
+
+  students.forEach((i,y)=>{
+
+
+if(i.id===userid){
+  ind=y;
+
+}
+
+
+});
+
+
+console.log(ind);
+
+if(ind===-1){
+
+  console.log("element not found");
+  console.log("we cannot updated studenst")
+
+  return;
+
+}
+
+
+students[ind].fee=data;
+
+
+}
+
+findandupadated("102",567);
+
+console.log(students);
+
+
+// spipces
+
+students.splice(1,1);
+
+console.log(students);
+
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>
