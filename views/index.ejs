@@ -35,18 +35,18 @@
         </h5>
 
       
-        <div style="display: flex;">
+        <div style="display: flex; flex-wrap: wrap;">
           <% product.forEach(function(i){ %>
             <div style="margin: 16px 16px;" >
               
               <div>
                 <a href="<%=i.buylink %>" style="text-decoration: none; color: white;">
              
-                  <img src="<%=i.imlink %>" style="width: 300px;" alt="<%=i.name %>">
+                  <img src="<%=i.imlink %>" style="width: 300px; height: 10%;" alt="<%=i.name %>">
                </a>
               
               </div>
-                <p style="font-size: 20px; font-weight: 500;"><%=i.name %></p>
+                <p style="font-size: 20px; font-weight: 500;margin: 16px 8px;"><%=i.name %></p>
         
             </div>
           <% }); %>
