@@ -8,7 +8,7 @@ async function  DbConnect() {
 
    
 try {
-    await mongoose.connect('mongodb+srv://user-sanjay:sanjay1234@sanjay.fomjy.mongodb.net/SanjayDatabse?retryWrites=true&w=majority',{
+    await mongoose.connect('mongodb+srv://user-sanjay:sanjay1234@sanjay.fomjy.mongodb.net/AmzonDB?retryWrites=true&w=majority',{
         useNewUrlParser:true,
         useUnifiedTopology:true,
     });
